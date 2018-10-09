@@ -32,8 +32,8 @@ class ChatMessage extends React.Component {
         mr={isMe ? 0 : 'auto'}
       >
         {!hideAvatar && (
-          <Box mb={2}>
-            <Avatar url={author.photoURL} size={32} bg="transparent" />
+          <Box mb="6px">
+            <Avatar url={author.photoURL} size={36} bg="transparent" />
           </Box>
         )}
 
@@ -51,13 +51,7 @@ class ChatMessage extends React.Component {
           mr={!isMe ? 5 : 0}
           py="12px"
           px="18px"
-          background={
-            isMe
-              ? `linear-gradient(45deg, ${colors.primary.main}, ${
-                  colors.primary.dark
-                })`
-              : 'white'
-          }
+          bg={isMe ? 'primary.main' : 'white'}
           boxShadow={
             !isMe
               ? `0px 4px 8px ${chroma(colors.primary.main)

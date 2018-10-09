@@ -312,7 +312,7 @@ const getColors = baseColor => {
 }
 
 const palette = [
-  colors.blue[700],
+  colors.blue[400],
   colors.orange[500],
   'rgba(250, 25, 139, 1)',
   'rgba(253, 240, 213, 1)',
