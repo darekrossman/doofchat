@@ -312,8 +312,8 @@ const getColors = baseColor => {
 }
 
 const palette = [
-  '#1D2671',
-  '#C33764',
+  colors.blue[700],
+  colors.orange[500],
   'rgba(250, 25, 139, 1)',
   'rgba(253, 240, 213, 1)',
   'rgba(198, 216, 211, 1)',

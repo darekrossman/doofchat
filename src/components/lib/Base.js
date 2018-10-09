@@ -44,7 +44,6 @@ const Base = styled.div`
   ${sty.alignContent}
   ${sty.alignSelf}
   ${sty.justifySelf}
-  ${sty.order}
   ${sty.flexBasis}
   ${sty.fontFamily}
   ${sty.textAlign}
@@ -72,6 +71,8 @@ const Base = styled.div`
 
   ${style('overflow', 'overflow')}
   ${style('blend', 'mix-blend-mode')}
+  ${style('filter', 'filter')}
+  ${style('order', 'order')}
 
   ${props => props.css}
 `

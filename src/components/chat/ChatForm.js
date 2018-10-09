@@ -29,7 +29,7 @@ class ChatForm extends React.Component {
             name="message"
             type="text"
             height={60}
-            px={4}
+            px={3}
             placeholder="do me a chat..."
             value={this.state.messageInput}
             onChange={this.updateMessageInput}
