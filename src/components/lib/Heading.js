@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { textStyles } from 'styled-system'
+import { textStyle } from 'styled-system'
 import Base from './Base'
 
-const Heading = styled(Base)({}, textStyles)
+const Heading = styled(Base)({}, textStyle)
 
 Heading.defaultProps = {
   as: 'h2',

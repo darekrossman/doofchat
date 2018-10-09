@@ -1,7 +1,6 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { themeGet } from 'styled-system'
-import Flex from './Flex'
 import Grid from './Grid'
 import Text from './Text'
 import Icon from './Icon'

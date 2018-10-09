@@ -1,7 +1,6 @@
-import chroma from 'chroma-js'
-import { themeGet, buttonStyle, mixed } from 'styled-system'
-import styled, { css as scss } from 'styled-components'
-import Base, { extendBase } from './Base'
+import { buttonStyle } from 'styled-system'
+import styled from 'styled-components'
+import Base from './Base'
 
 const Button = styled(Base)(
   {
@@ -27,7 +26,7 @@ Button.defaultProps = {
   border: 0,
   py: 0,
   px: 3,
-  borderRadius: 3,
+  borderRadius: 4,
   minWidth: 40,
   height: 40,
   bg: 'primary.main',

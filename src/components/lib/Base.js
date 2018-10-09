@@ -70,6 +70,9 @@ const Base = styled.div`
   ${style('transform', 'transform')}
   ${style('transition', 'transition', 'transitions')}
 
+  ${style('overflow', 'overflow')}
+  ${style('blend', 'mix-blend-mode')}
+
   ${props => props.css}
 `
 
