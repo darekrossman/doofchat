@@ -1,7 +1,20 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from 'react'
+import createStore from 'unistore'
+import { Provider } from 'unistore/react'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyle from './src/components/GlobalStyle'
+import theme from './src/theme'
 
-// You can delete this file if you're not using it
+const initialState = { messages: {} }
+const store = createStore(initialState)
+
+export const wrapRootElement = ({ element }) => (
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <GlobalStyle />
+        {element}
+      </React.Fragment>
+    </ThemeProvider>
+  </Provider>
+)

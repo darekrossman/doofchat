@@ -1,10 +1,9 @@
 import firebase from 'firebase'
 
-const db = firebase.firestore()
-
 export default store => {
   const actions = {
     createMessage(state, { message }) {
+      const db = firebase.firestore()
       const messageRef = db.collection('messages').doc()
       const userRef = db.collection('users').doc(state.user.uid)
 
@@ -29,6 +28,7 @@ export default store => {
     },
 
     createUser: async (state, { email, password, displayName }) => {
+      const db = firebase.firestore()
       const { user } = await firebase
         .auth()
         .createUserWithEmailAndPassword(email, password)
@@ -39,6 +39,7 @@ export default store => {
     },
 
     updateUserProfile: async (state, { uid, ...data }) => {
+      const db = firebase.firestore()
       db.collection('users')
         .doc(uid)
         .update(data)
