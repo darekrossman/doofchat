@@ -1,15 +1,8 @@
 import firebase from 'firebase'
 import firestore from 'firebase/firestore'
 
-export const initDB = () => {
-  firebase.initializeApp({
-    apiKey: 'AIzaSyDKF4H_YkaiVY8MO8PZ7lCQe2BVmKgxyVg',
-    authDomain: 'doofchat-cd12f.firebaseapp.com',
-    databaseURL: 'https://doofchat-cd12f.firebaseio.com',
-    projectId: 'doofchat-cd12f',
-    storageBucket: 'doofchat-cd12f.appspot.com',
-    messagingSenderId: '343565348850',
-  })
+export const initDB = config => {
+  firebase.initializeApp(config)
   const db = firebase.firestore()
   const settings = { timestampsInSnapshots: true }
   db.settings(settings)

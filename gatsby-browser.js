@@ -12,7 +12,15 @@ import {
 import GlobalStyle from './src/components/GlobalStyle'
 import theme from './src/theme'
 
-const db = initDB()
+const firebaseAppConfig = {
+  apiKey: 'AIzaSyDKF4H_YkaiVY8MO8PZ7lCQe2BVmKgxyVg',
+  authDomain: 'doofchat-cd12f.firebaseapp.com',
+  databaseURL: 'https://doofchat-cd12f.firebaseio.com',
+  projectId: 'doofchat-cd12f',
+  storageBucket: 'doofchat-cd12f.appspot.com',
+  messagingSenderId: '343565348850',
+}
+const db = initDB(firebaseAppConfig)
 const initialState = { messages: {} }
 const store =
   process.env.NODE_ENV === 'production'
